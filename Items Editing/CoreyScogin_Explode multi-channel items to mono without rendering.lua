@@ -2,9 +2,8 @@
  * ReaScript Name: Explode multi-channel items to mono without rendering
  * Description: Explodes multi-channel audio items to mono items without rendering. 
  * Instructions: Select an audio item. Run the script. 
- * Author: CoreyScogoin
+ * Author: CoreyScogin
  * Author URI: https://github.com/CoreyScogin
- * Repository: GitHub > X-Raym > EEL Scripts for Cockos REAPER
  * Repository URI: https://github.com/CoreyScogin/ReaScripts
  * File URI: https://github.com/CoreyScogin/ReaScripts/Items_Editing/CoreyScogin_Explode multi-channel items to mono without rendering.lua
  * Licence: GPL v3
