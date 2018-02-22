@@ -1,6 +1,6 @@
 # Reaper Script Repository
 
-My collection of scripts for [REAPER](https://www.reaper.fm), a Digital Audio Workstation.
+My collection of scripts for [REAPER](https://www.reaper.fm), a **D**igital **A**udio **W**orkstation.
 
 ## Installation
 
