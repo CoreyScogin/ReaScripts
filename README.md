@@ -4,7 +4,7 @@ My collection of scripts for [REAPER](https://www.reaper.fm), a Digital Audio Wo
 
 ## Installation
 
-- Download one of the .lua files.
-- In Reaper, open the Actions menu (?).
-- Near ReaScript, select Load.
-- Select the .lua file.
+* Download one of the *.lua* files.
+* In Reaper, open the Actions menu (?).
+* Near *ReaScript*, select **Load**.
+* Select the *.lua* file.
