@@ -5,9 +5,9 @@
  * Author: CoreyScogin
  * Author URI: https://github.com/CoreyScogin
  * Repository URI: https://github.com/CoreyScogin/ReaScripts
- * File URI: https://github.com/CoreyScogin/ReaScripts/Items_Editing/CoreyScogin_Explode multi-channel items to mono without rendering.lua
+ * File URI: https://github.com/CoreyScogin/ReaScripts/blob/master/Items%20Editing/CoreyScogin_Explode%20multi-channel%20items%20to%20mono%20without%20rendering.lua
  * Licence: GPL v3
- * Version: 0.9
+ * Version: 1.0
 --]]
  
 --[[
@@ -36,19 +36,19 @@ if selectedItemsCount > 0 then
   reaper.Undo_BeginBlock()
   
   -- Save cursor
-  origCursorPos = reaper.GetCursorPosition()
+  local origCursorPos = reaper.GetCursorPosition()
   
   -- Main Function    
-  groupId = 5000      -- base for grouping resulting items
+  local groupId = 5000      -- base for grouping resulting items
 
   -- init arrays
-  selectedItems = {} 
-  origItem = {}
-  origTake = {}
-  origSource = {}
-  origTrack = {}
-  channelCount = {}
-  maxChannelCount = 0
+  local selectedItems = {} 
+  local origItem = {}
+  local origTake = {}
+  local origSource = {}
+  local origTrack = {}
+  local channelCount = {}
+  local maxChannelCount = 0
   
   -- Get an array of selected items for reference later
   for i = 0, selectedItemsCount - 1  do
@@ -66,7 +66,7 @@ if selectedItemsCount > 0 then
   end 
   
   -- Process each selected item
-  lastOrigTrackIndex = -100 
+  local lastOrigTrackIndex = -100 
   for i = 0, selectedItemsCount - 1  do   
     reaper.Main_OnCommand(40289, 0) -- Unselect all items 
     reaper.SetMediaItemSelected(origItem[i], 1) -- Select original item
@@ -78,8 +78,8 @@ if selectedItemsCount > 0 then
     reaper.Main_OnCommand(40914, 0) -- Set selected track as last touched
         
     -- Determine whether or not to insert new tracks for items
-    thisOrigTrackIndex = reaper.CSurf_TrackToID(origTrack[i], false)
-    insertTrack = (lastOrigTrackIndex ~= thisOrigTrackIndex) 
+    local thisOrigTrackIndex = reaper.CSurf_TrackToID(origTrack[i], false)
+    local insertTrack = (lastOrigTrackIndex ~= thisOrigTrackIndex) 
     
     -- Add items for each channel
     for c = 0, channelCount[i] - 1 do    
@@ -90,8 +90,8 @@ if selectedItemsCount > 0 then
         reaper.Main_OnCommand(40285, 0) -- Go to next track
       end      
       reaper.Main_OnCommand(40058, 0) -- Paste item
-      newItem = reaper.GetSelectedMediaItem(0, 0)
-      newTake = reaper.GetActiveTake(newItem)
+      local newItem = reaper.GetSelectedMediaItem(0, 0)
+      local newTake = reaper.GetActiveTake(newItem)
       reaper.SetMediaItemTakeInfo_Value(newTake, "I_CHANMODE", c+3) -- Set the channel in the media item to use
       reaper.SetMediaItemInfo_Value(newItem, "I_GROUPID", groupId + i) -- Group all exploded items together
     end -- for channelCount    
