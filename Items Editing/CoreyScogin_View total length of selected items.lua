@@ -5,7 +5,7 @@
  * Author: CoreyScogin
  * Author URI: https://github.com/CoreyScogin
  * Repository URI: https://github.com/CoreyScogin/ReaScripts
- * File URI: https://github.com/CoreyScogin/ReaScripts/
+ * File URI: https://github.com/CoreyScogin/ReaScripts/blob/master/Items%20Editing/CoreyScogin_View%20total%20length%20of%20selected%20items.lua
  * Licence: GPL v3
  * Version: 1.0
 --]]
