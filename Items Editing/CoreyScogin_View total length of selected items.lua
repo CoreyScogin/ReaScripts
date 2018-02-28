@@ -26,7 +26,7 @@ function disp_time(time)
 end
 
 -- Main ---------------------------------------------------
-selectedItemsCount = reaper.CountSelectedMediaItems(0)
+local selectedItemsCount = reaper.CountSelectedMediaItems(0)
 
 if selectedItemsCount > 0 then
 
